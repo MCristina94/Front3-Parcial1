@@ -1,14 +1,13 @@
 import { useState } from 'react'
 import './App.css'
-import Card from './Componentes/Card'
+import Formulario from './Componentes/Formulario'
 
 function App() {
 
   return (
     <>
-    <h1>Carga de Estudiantes</h1>
-    <form action=""></form>
-     <Card/>
+    <h1>Deseamos conocerte mejor!</h1>
+    <Formulario/>
     </>
   )
 }
