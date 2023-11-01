@@ -26,19 +26,19 @@ const Formulario = () => {
     <div>
         {!show &&
         <form onSubmit={handleSumbit} style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
-            <label>Nombre:</label>
-            <input type="text" placeholder='Ingresa tu nombre' value = {usuario.nombre} onChange={(event) => setUsuario({...usuario, nombre: event.target.value})}/>
+            <label  style={{color: 'black'}}>Nombre:</label>
+            <input type="text" placeholder='Ingresa tu nombre' value = {usuario.nombre} onChange={(event) => setUsuario({...usuario, nombre: event.target.value.trim()})}/>
 
-            <label>Canción favorita:</label>
+            <label style={{color: 'black'}}>Canción favorita:</label>
             <input type="text" placeholder='Ingresa tu canción favorita' value = {usuario.cancion} onChange={(event) => setUsuario({...usuario, cancion: event.target.value})}/>
 
-            <label>Pelicula favorita:</label>
+            <label style={{color: 'black'}}>Pelicula favorita:</label>
             <input type="text" placeholder='Ingresa tu peli favorita' value = {usuario.pelicula} onChange={(event) => setUsuario({...usuario, pelicula: event.target.value})}/>
 
-            <label>Libro favorito:</label>
+            <label style={{color: 'black'}}>Libro favorito:</label>
             <input type="text" placeholder='Ingresa tu libro favorito' value = {usuario.libro} onChange={(event) => setUsuario({...usuario, libro: event.target.value})}/>
 
-            <button>Enviar</button>
+            <button  style={{margin: '30px'}}>Enviar</button>
         </form>}
         {show && <Card nombre = {usuario.nombre} cancion = {usuario.cancion} pelicula = {usuario.pelicula} libro ={usuario.libro}/>}
         {error && <h4 style={{color: 'red' , backgroundColor: 'rgba(128, 128, 128, 0.8)'}}>Por favor chequea que la información sea correcta</h4>}
